@@ -1,0 +1,78 @@
+{
+  "fakta": [
+    {
+      "id": "F1",
+      "pertanyaan": "Apakah curah hujan di wilayah Anda rendah?"
+    },
+    {
+      "id": "F2",
+      "pertanyaan": "Apakah sudah lama tidak turun hujan?"
+    },
+    {
+      "id": "F3",
+      "pertanyaan": "Apakah kondisi tanah terlihat kering?"
+    },
+    {
+      "id": "F4",
+      "pertanyaan": "Apakah sumber air mengalami penurunan?"
+    },
+    {
+      "id": "F5",
+      "pertanyaan": "Apakah ketersediaan air untuk kebutuhan sehari-hari berkurang?"
+    },
+    {
+      "id": "F6",
+      "pertanyaan": "Apakah lahan pertanian mengalami kekeringan?"
+    },
+    {
+      "id": "F7",
+      "pertanyaan": "Apakah tanaman mulai layu akibat kekurangan air?"
+    },
+    {
+      "id": "F8",
+      "pertanyaan": "Apakah vegetasi atau tumbuhan di sekitar mulai mengering?"
+    }
+  ],
+
+  "aturan": [
+    {
+      "id": "R1",
+      "jika": ["F1", "F2"],
+      "maka": "G1"
+    },
+    {
+      "id": "R2",
+      "jika": ["G1", "F3"],
+      "maka": "G2"
+    },
+    {
+      "id": "R3",
+      "jika": ["G2", "F4"],
+      "maka": "G3"
+    },
+    {
+      "id": "R4",
+      "jika": ["G3", "F5"],
+      "maka": "G4"
+    },
+    {
+      "id": "R5",
+      "jika": ["G2", "F6", "F7"],
+      "maka": "G5"
+    },
+    {
+      "id": "R6",
+      "jika": ["G2", "F8"],
+      "maka": "G6"
+    }
+  ],
+
+  "kesimpulan": {
+    "G1": "Kondisi kekeringan awal",
+    "G2": "Indikasi kekeringan lingkungan",
+    "G3": "Potensi penurunan ketersediaan air",
+    "G4": "Potensi kekurangan air bersih",
+    "G5": "Potensi kekeringan pertanian",
+    "G6": "Potensi peningkatan risiko kebakaran lahan"
+  }
+}
